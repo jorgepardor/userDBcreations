@@ -40,7 +40,7 @@ def add_user():
     if not name or not email or not password or not role_id:
         return jsonify({'message': 'Es necesario completar todos los campos para agregar un usuario'}), 401
 
-    user = User(name=name, email=email, password=password, role_id=role, is_active=True)
+    user = User(name=name, email=email, password=password, role_id=role_id, is_active=True)
     db.session.add(user)
     db.session.commit()
     if not user:

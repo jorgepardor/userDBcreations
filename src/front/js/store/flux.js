@@ -24,7 +24,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getMessage: () => {
         // fetching data from the backend
-        fetch(process.env.BACKEND_URL + "/api/hello")
+        fetch(process.env.BACKEND_URL + "/hello")
           .then((resp) => resp.json())
           .then((data) => setStore({ message: data.message }))
           .catch((error) =>
@@ -34,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getRoles: () => {
         // fetching data from the backend
-        fetch(process.env.BACKEND_URL + "/api/role")
+        fetch(process.env.BACKEND_URL + "/role")
           .then((resp) => resp.json())
           .then((data) => setStore({ roles: data }))
           .catch((error) => console.log("Error obtaining roles", error));

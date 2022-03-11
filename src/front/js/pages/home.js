@@ -16,7 +16,7 @@ export const Home = () => {
   };
 
   const handleSubmit = () => {
-    fetch(process.env.BACKEND_URL + "/api/user", {
+    fetch(process.env.BACKEND_URL + "/user", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -29,7 +29,7 @@ export const Home = () => {
     <div className="text-center mt-5 container">
       <div className="row">
         <div className="mb-3">
-          <label for="nameId" className="form-label">
+          <label htmlFor="nameId" className="form-label">
             Name
           </label>
           <input
@@ -42,7 +42,7 @@ export const Home = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="emailId" className="form-label">
+          <label htmlFor="emailId" className="form-label">
             Email address
           </label>
           <input
@@ -55,7 +55,7 @@ export const Home = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="passwordId" className="form-label">
+          <label htmlFor="passwordId" className="form-label">
             Password
           </label>
           <input
@@ -68,7 +68,7 @@ export const Home = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="role" className="form-label">
+          <label htmlFor="role" className="form-label">
             Role
           </label>
           <select
